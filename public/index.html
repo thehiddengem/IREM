@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Homepage</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo_header">
+      <a href="/">
+        <img src="images/slider/FavIcon.png" alt="Logo">
+      </a>
+    </div>
+    <nav>
+      <ul class="menu">
+        <li>
+          <a href="/">Capabilities <i class="arrow down"></i></a>
+          <ul class="submenu">
+            <li><a href="/capabilities/design">Design</a></li>
+            <li><a href="/capabilities/production">Production</a></li>
+            <li><a href="/capabilities/certification">Certification</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="/flavors">Flavors <i class="arrow down"></i></a>
+          <ul class="submenu" id="flavor-categories">
+            <!-- Dynamically loaded if needed -->
+          </ul>
+        </li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-container">
+    <section class="slider-section">
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="images/slider/slider_1.jpg" alt="Slide 1">
+          <div class="text">Design</div>
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="images/slider/slider_2.jpg" alt="Slide 2">
+          <div class="text">Production</div>
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="images/slider/slider_3.jpg" alt="Slide 3">
+          <div class="text">Certification</div>
+        </div>
+      </div>
+      <div class="dots-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </section>
+
+    <section class="text-and-quote">
+      <div class="text-content">
+        <h1>Design. Manufacture. Deliver</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit, lorem quis tempus fermentum, nisl
+          nisi pellentesque arcu, at venenatis erat tortor vel ligula. Sed nec eros in purus pharetra imperdiet.</p>
+        <p>Aliquam at augue ac magna gravida tempor. Morbi sollicitudin, lorem non facilisis dictum, justo ipsum
+          imperdiet erat, eget tincidunt metus nulla nec dui. Cras scelerisque sem id purus molestie, sed cursus ante
+          mollis. Vivamus varius pellentesque nunc, quis tempor massa congue vitae.</p>
+        <p>Sed a purus dignissim, egestas quam ut, bibendum ipsum. Suspendisse dignissim erat non odio fringilla
+          dignissim. Suspendisse vel nulla nec lacus posuere porta. Quisque vel odio consectetur, condimentum urna
+          ultricies, facilisis sapien.</p>
+      </div>
+      <aside class="quote-container">
+        <h2>Get a Quote</h2>
+        <form class="quote-form" action="/quotes" method="POST">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="capability">Select a Capability:</label>
+          <select id="capability" name="capability" required>
+            <option value="">Select...</option>
+          </select>
+
+          <label for="comments">Comments:</label>
+          <textarea id="comments" name="comments"></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+      </aside>
+    </section>
+  </main>
+
+  <footer>
+    <p>Copyright &copy; <span id="year"></span>. All rights reserved.</p>
+    <a href="/" class="logo_footer">
+      <img src="images/slider/FavIcon.png" alt="Footer Logo">
+    </a>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

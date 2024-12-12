@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Flavors</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo_header">
+      <a href="/">
+        <img src="images/slider/FavIcon.png" alt="Logo">
+      </a>
+    </div>
+    <nav>
+      <ul class="menu">
+        <li>
+          <a href="/capabilities">Capabilities <i class="arrow down"></i></a>
+          <ul class="submenu">
+            <li><a href="/capabilities/design">Design</a></li>
+            <li><a href="/capabilities/production">Production</a></li>
+            <li><a href="/capabilities/certification">Certification</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="/flavors">Flavors <i class="arrow down"></i></a>
+          <ul class="submenu" id="flavor-categories">
+            <!-- Dynamically loaded -->
+          </ul>
+        </li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-container flavors-page">
+    <section class="flavors-hero">
+      <h1>Flavors</h1>
+    </section>
+
+    <section class="text-and-quote">
+      <div class="categories-container" id="categories">
+        <!-- Dynamically loaded categories -->
+      </div>
+
+      <aside class="quote-container">
+        <h2>Get a Quote</h2>
+        <form class="quote-form" action="/quotes" method="POST">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="capability">Select a Capability:</label>
+          <select id="capability" name="capability" required>
+            <option value="">Select...</option>
+            <!-- Dynamically populated -->
+          </select>
+
+          <label for="comments">Comments:</label>
+          <textarea id="comments" name="comments"></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+      </aside>
+    </section>
+  </main>
+
+  <footer>
+    <p>Copyright &copy; <span id="year"></span>. All rights reserved.</p>
+    <a href="/" class="logo_footer">
+      <img src="images/slider/FavIcon.png" alt="Footer Logo">
+    </a>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>
